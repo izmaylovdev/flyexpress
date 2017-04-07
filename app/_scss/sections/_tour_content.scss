@@ -1,0 +1,117 @@
+@import '../common/colors';
+
+.slider{
+    position: relative;
+
+    &__list{
+        padding: 0;
+        margin: 0px;
+    }
+    &__item{
+        list-style: none;
+    }
+    .owl-prev, .owl-next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,.5);
+        color: white;
+        font-size: 1.5em;
+        padding: 10px 10px;
+        text-align: center;
+        
+        i{
+            display: block;
+            border-width: 1px 1px 0 0;
+            border-color: white;
+            border-style: solid;
+            transform: rotateZ(-135deg) translate3d(-2px,2px,0);
+            transform-origin: 50% 50%;
+            width: 10px;
+            height: 10px;
+        }
+    }
+    .owl-next{
+        right: 0px;
+        i{
+            transform: rotateZ(45deg) translate3d(-2px,2px,0);
+        }
+    }
+}
+.tour{
+    padding: 5px;
+
+    h1{
+        margin-left: 5px;
+        font-size: (18em / 14);
+        line-height: (24rem / 14);
+        font-weight: normal;
+        margin-top: 6px;
+        margin-bottom: 0px;
+    }
+
+    &__data{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        padding: 0px 5px;
+        font-size: (13em / 14);
+        line-height: (16rem / 14);
+    }
+    &__data-name, &__data-val{
+        width: 50%;
+        display: block;
+        margin-top: 14px;
+    }
+    &__data-val{
+        color: #666666;
+    }
+    &__data-cost{
+        color: #1093FF;
+        font-size: (18em / 14);
+        font-weight: 600;
+    }
+    &__data-subtext{
+        display: block;
+    }
+
+    &__get-button{
+        background: $orange;
+        color: white;
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        padding: 20px;
+        font-size: (16em / 14);
+        margin: 10px 0 0;
+
+        &:hover{
+            background: darken($orange,5%);
+        }
+        &:active{
+            background: darken($orange,7%);
+        }
+    }
+    &__desc{
+        list-style: none;
+        color: $grey;
+        font-size: 1em;
+        line-height: (22rem / 14);
+
+        h2{
+            text-align: center;
+            color: #000;
+            font-size: (16rem / 14);
+        }
+        h3{
+            color: black;
+        }
+        b{
+            color: #222222;
+        }
+        p{
+            margin: 2px;
+        }
+    }
+}

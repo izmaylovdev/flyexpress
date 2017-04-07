@@ -1,0 +1,20 @@
+@import 'common/normalize';
+@import 'common/spriteSvg';
+@import 'common/misc';
+@import '../../node_modules/owl.carousel/src/scss/owl.carousel';
+@import '../../node_modules/owl.carousel/src/scss/owl.theme.default';
+
+@import 'sections/aside';
+@import 'sections/socials';
+@import 'sections/nav';
+@import 'sections/tabs';
+@import 'sections/header';
+@import 'sections/get_form';
+@import 'sections/logo';
+@import 'sections/footer';
+@import 'sections/tour_content';
+@import 'sections/country_content';
+@import 'sections/contacts_content';
+@import 'sections/home_content';
+@import 'sections/price_label';
+@import 'sections/popup';

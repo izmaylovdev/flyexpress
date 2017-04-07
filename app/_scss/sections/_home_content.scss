@@ -1,0 +1,88 @@
+@import '../common/colors';
+.search-form{
+    width: 100%;
+
+    input,select, .fakeInput{
+        display: block;
+        width: 100%;
+        padding: 20px;
+        background: #EDF2F6;
+        border: none;
+        border-bottom: 1px solid #aaa;
+        border-radius: 0;
+        font-size: 1em;
+        outline: none;
+        
+        &:focus{
+            border-color: $blueLight;
+            background-color: white;
+        }
+
+    }
+    select{
+        width: 100%;
+        -webkit-appearance: none;
+        line-height: 1em;
+        /* for FF */
+        -moz-appearance: none;
+        text-indent: 0.01px; 
+        text-overflow: '';
+        /* for IE */
+        -ms-appearance: none;
+        appearance: none!important;
+    }
+    input[type='date']{
+        position: absolute;
+        left: -1000px;
+        top: 0;
+
+        &:focus+.fakeInput{
+            background-color: white;
+        }
+    }
+    .fakeInput{
+        position: relative;
+    }
+    .fakeInput_empty{
+        color: #aaa;
+    }
+    button{
+        padding: 20px;
+        width: 100%;
+        font-size: (16em / 14);
+        background-color: $orange;
+        border: none;
+        color: white;
+    }
+    label{
+        position: relative;
+        display: block;
+
+        .icon{
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: black;
+
+            &-calendar{
+                font-size: 12.33px;
+            }
+            &-search{
+                font-size: 12.3px;
+            }
+            &-arrow_down{
+                font-size: 6.1px;
+            }
+        }
+    }
+    select:focus + .icon{
+        transform: translateY(-50%) rotateZ(180deg);
+    }
+}
+.home{
+    
+    .get-form{
+        margin-top: 0;
+    }
+}

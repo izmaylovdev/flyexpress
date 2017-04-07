@@ -1,0 +1,28 @@
+html{
+    font-size: 14px;
+}
+body{
+    margin: 0;
+    position: relative;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+h2,h3,h4{
+    font-weight: 600;
+}
+h1{
+    font-size: (22em / 14);
+}
+h2{
+    font-size: (18em / 14);
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+main{
+    flex: 1;
+}

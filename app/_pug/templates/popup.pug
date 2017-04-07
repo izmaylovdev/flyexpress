@@ -1,0 +1,15 @@
+include ../common/mixins
+
+.popup
+    a(href="#").popup__close
+        +icon('x-mark','')
+    h2.popup__title Бронирование тура
+    span.popup__sub-title Наши специалисты свяжутся с вами и ответят <br> на все интересующие вопросы
+    form(href="#").popup__form
+        input(type="text" name="name" placeholder="Как вас зовут?*")
+        input(type="email" name='mail' placeholder="Введите email")
+        input(type="tel" name="tel" placeholder="Введите номер телефона*")
+        button(type="submit") ЗАБРОНИРОВАТЬ
+    span.popup__text 
+        span.popup__blue-text *
+        |  Обязательные поля

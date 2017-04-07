@@ -1,0 +1,9 @@
+include ../common/mixins
+nav.nav
+    ul.nav__list
+        -var items = {'country.html':'Страны','index.html':'Поиск туров','contacts.html':'Контракты'}
+        each item,link in items
+            li.nav__item
+                a(href=link).nav__link=item 
+                    if item==='Поиск туров'
+                        +icon('search','')

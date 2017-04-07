@@ -1,0 +1,7 @@
+.socials
+    ul.socials__list
+        -var items = ['instagram','vk','fb'];
+        -for(var item of items)
+            li.socials__item
+                a(href="#" target='_blank').socials__link
+                    +icon(item,'')

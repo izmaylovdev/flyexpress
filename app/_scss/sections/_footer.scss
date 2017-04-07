@@ -1,0 +1,59 @@
+.footer{
+    background: #3B4653;
+    padding: 15px 13px;
+    color: white;
+    width: 100%;
+
+    .logo{
+        width: 60%;
+    }
+
+    &__copy{
+        margin-top: 18px;
+        display: block;
+        border-bottom: 2px solid #353F44;
+        padding: 13px;
+        margin: 0 -13px 0;
+    }
+    &__link{
+        display: inline-block;
+        margin-top: 13px;
+        color: white;
+        text-decoration: none;
+    }
+    .socials__list{
+        margin: 10px 0;
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+    .socials__item{
+        margin-right: 10px;
+    }
+}
+.offices{
+
+    margin: 15px 0;
+    
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0px;
+        margin: 0;
+    }
+
+    &__item{
+        list-style: none;
+        margin-top: 20px;
+        margin: 10px;
+    }
+    &__link{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    &__text{
+        display: block;
+        font-size: (12em /14);
+    }
+}

@@ -1,0 +1,18 @@
+.socials{
+
+    &__list{
+        display: flex;
+        padding: 0px; 
+        margin: 0px;
+        justify-content: space-around;
+        width: 50%;
+        margin: auto;
+    }
+    &__item{
+        list-style: none;
+
+        .icon{
+            font-size: 30px;
+        }
+    }
+}

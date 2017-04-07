@@ -1,0 +1,21 @@
+include ../common/mixins
+main.country
+    h1.country__main-title Италия
+    ul.country__tours-list
+        -for(i=4;i;i--)
+            li.country__tours-item
+                a(href="tour.html").country__tours-link
+                    .tour-thumb
+                        span.price-label
+                            span.price-label__subtext от 
+                            | 1379 EUR
+                        img(src="./img/city.jpg", alt="Ирландия").tour-thumb__img
+                        .tour-thumb__data
+                            h2.tour-thumb__title Тур в Ирландию, Выходные в Дублине на Днень Св. Патрика
+                            ul.tour-thumb__attr-list
+                                li.tour-thumb__attr-item
+                                    +icon('grid','')
+                                    span 8 дней/7 ночей
+                                li.tour-thumb__attr-item
+                                    +icon('plane','')
+                                    span С авиаперелетом

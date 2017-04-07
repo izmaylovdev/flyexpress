@@ -1,0 +1,88 @@
+main.home
+    .tabs
+        ul.tabs__titles
+            li.tabs__titles-item
+                a(href="#").tabs__link.tabs__link_active
+                    +icon('palm')
+                    | Туры
+            li.tabs__titles-item
+                a(href="#").tabs__link 
+                    +icon('hotel')
+                    | Отели
+        ul.tabs__list
+            li.tabs__item.tabs__item_active
+                form.search-form
+                    label
+                        input(type="text" required name='county' placeholder="Страна, город или отель")
+                        +icon('search','')
+                   
+                    label(for="date")
+                        input(type="date" name='date' id='date').fakeInput-source
+                        span(data-placeholder="Дата вылета").fakeInput.fakeInput_empty Дата вылета
+                        +icon('calendar','')
+
+                    label
+                        select(name='adult')
+                            option(value='1') 1 взрослый
+                            option(value='2' selected='selected') 2 взрослыx
+                            -for(val = 3; val<7; val++)
+                                option(value=val)=`${val} взрослыx`
+                        +icon('arrow_down','')
+                    
+                    label
+                        select(name='child')
+                            option(value='0') без детей
+                            option(value='1') 1 ребенок
+                            -for(val = 2; val<5; val++)
+                                option(value=val)=`${val} ребенка`
+                        +icon('arrow_down','')
+                    
+                    label
+                        select(name='from')
+                            option(value='moscow') Вылет из Москвы
+                            option(value='sp') Вылет из Питера
+                            option(value='kiev') Вылет из Киева
+                        +icon('arrow_down','')
+                    
+                    label
+                        select(name='duration')
+                            -var vals = {'3':'от 3 дней','5':"от 5 дней",'7':"от 7 дней", '11':"от 11 дней", '14':"от 14 дней"};
+                            each name,val in vals
+                                option(value=val)=name
+                        +icon('arrow_down','')
+                    
+                    button(type='submit') Искать туры
+            li.tabs__item
+                form.search-form
+                        label
+                            input(type="text" name='place' required placeholder="Город или отель")
+                            +icon('search','')
+                    
+                        label(for="date2")
+                            input(type="date" name='date' id='date2').fakeInput-source
+                            span(data-placeholder="Дата заезда").fakeInput.fakeInput_empty Дата заезда
+                            +icon('calendar','')
+
+                        label
+                            select(name='adult')
+                                option(value='1') 1 человек
+                                option(value='2' selected='selected') 2 человека
+                                -for(val = 3; val<7; val++)
+                                    option(value=val)=`${val} человека`
+                            +icon('arrow_down','')
+
+                        label
+                            select(name='rooms')
+                                option(value='1') 1 номер
+                                -for(val = 2; val<7; val++)
+                                    option(value=val)=`${val} номер${val<5? 'а':'ов'}`
+                            +icon('arrow_down','')
+                        
+                        label
+                            select(name='duration')
+                                -for(i=1; i<15; i++)
+                                    option(value=i)= `от ${i} ${i==1? "ночи": 'ночей'}`
+                            +icon('arrow_down','')
+                        
+                        button(type='submit') Искать отели
+    include get_form
