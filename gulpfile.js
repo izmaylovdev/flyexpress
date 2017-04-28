@@ -67,13 +67,13 @@ gulp.task('jsBuild', () => {
 				]
 			},
 			plugins: [
-				new webpack.optimize.UglifyJsPlugin({
-					compress: {
-						warnings: false,
-						drop_console: true,
-						unsafe: true
-					}
-				})
+				// new webpack.optimize.UglifyJsPlugin({
+				// 	compress: {
+				// 		warnings: false,
+				// 		drop_console: true,
+				// 		unsafe: true
+				// 	}
+				// })
 				//new webpack.NoEmitOnErrorsPlugin()
 			]
 		};

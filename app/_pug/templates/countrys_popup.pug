@@ -1,0 +1,16 @@
+include ../common/mixins
+.countrys-popup
+    a(href="#").countrys-popup__close 
+        +icon('x-mark','')
+    input(type="text" placeholder="Страна или город").countrys-popup__input
+    ul.countrys-popup__list
+        -for(i=10;i--;i)
+            li.countrys-popup__item
+                span.countrys-popup__val Россия
+                +icon('rus','')
+            li.countrys-popup__item
+                span.countrys-popup__val Москва
+                    span.country , Россия
+            li.countrys-popup__item
+                span.countrys-popup__val Москва
+                +icon('hotel','')
